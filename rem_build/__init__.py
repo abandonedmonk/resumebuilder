@@ -299,13 +299,13 @@ class AutoApplyModel:
             new_resume_path = resume_path.replace('\\', '/')
             print(f'New Resume Path from Init: {new_resume_path} \n')
             utils.write_json(new_resume_path, resume_details)
-            new_resume_path = new_resume_path.replace(".json", ".pdf")
+            final_resume_path = new_resume_path.replace(".json", ".pdf")
             st.write(f"resume_path: {resume_path}")
 
-            resume_latex = latex_to_pdf(resume_details, new_resume_path)
+            resume_latex = latex_to_pdf(resume_details, final_resume_path)
             # st.write(f"resume_pdf_path: {resume_pdf_path}")
 
-            return new_resume_path, resume_details, resume_latex
+            return final_resume_path, resume_details
         except Exception as e:
             print(e)
             st.write("Error: \n\n", e)

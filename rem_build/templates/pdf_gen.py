@@ -12,9 +12,12 @@ def convert_to_utf8(input_file, output_file):
     print(
         f"File '{input_file}' converted to UTF-8 and saved as '{output_file}'.")
 
+def get_filename_without_extension(file_path):
+    return os.path.splitext(os.path.basename(file_path))[0]
+
 
 def pdf_generator_vroom(tex_file_path, output_dir):
-    file_name = os.path.basename(tex_file_path)
+    file_name = get_filename_without_extension(tex_file_path)
     # custom_pdf_name = "custom_output"
 
     # Define the UTF-8 output file path
