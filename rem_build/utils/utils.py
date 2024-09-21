@@ -12,8 +12,8 @@ from fpdf import FPDF
 from pathlib import Path
 from datetime import datetime
 from langchain_core.output_parsers import JsonOutputParser
-from pylatex import Document
-from pylatex.utils import NoEscape
+# from pylatex import Document
+# from pylatex.utils import NoEscape
 from rem_build.templates.pdf_gen import pdf_generator_vroom
 import shutil
 
