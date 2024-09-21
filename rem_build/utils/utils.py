@@ -270,41 +270,6 @@ def save_latex_as_pdf(tex_file_path: str, dst_path: str):
     #     return None
 
 
-# def save_latex_as_pdf(tex_content: str, dst_path: str):
-#     try:
-#         # Create a LaTeX document using pylatex
-#         doc = Document()
-#         doc.append(NoEscape(tex_content))
-
-#         # Save the LaTeX file (optional if you want to keep a .tex file)
-#         tex_file_path = dst_path.replace(".pdf", ".tex")
-#         doc.generate_tex(filepath=tex_file_path)
-
-#         # Compile the LaTeX document into a PDF
-#         doc.generate_pdf(filepath=dst_path.replace(
-#             ".pdf", ""), clean_tex=False, compiler='C:/Program Files/MiKTeX/miktex/bin/x64/pdflatex.exe')
-
-#         # Clean up unnecessary files, keeping only the PDF and .tex files
-#         filename_without_ext = os.path.basename(tex_file_path).split(".")[0]
-#         unnecessary_files = [
-#             file
-#             for file in os.listdir(os.path.dirname(tex_file_path))
-#             if file.startswith(filename_without_ext) and not file.endswith((".tex", ".pdf"))
-#         ]
-
-#         for file in unnecessary_files:
-#             file_path = os.path.join(os.path.dirname(tex_file_path), file)
-#             if os.path.exists(file_path):
-#                 os.remove(file_path)
-
-#         print("PDF generated and unnecessary files cleaned up.")
-
-#     except Exception as e:
-#         print("An error occurred while generating PDF:")
-#         print(e)
-#         return None
-
-
 def get_default_download_folder():
     """Get the default download folder for the current operating system."""
     downlaod_folder_path = os.path.join(
