@@ -178,6 +178,7 @@ try:
                 with st.status("Building resume..."):
                     resume_path, resume_details = resume_llm.resume_builder(
                         job_details, user_data, is_st=True)
+                    print(f'Resume Path: {resume_path}')
                     # st.write("Outer resume_path: ", resume_path)
                     # st.write("Outer resume_details is None: ", resume_details is None)
                 resume_col_1, resume_col_2, resume_col_3 = st.columns(
