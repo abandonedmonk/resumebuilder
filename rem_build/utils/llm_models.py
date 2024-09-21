@@ -7,8 +7,8 @@ from langchain_ollama import OllamaEmbeddings
 import google.generativeai as genai
 from google.generativeai.types.generation_types import GenerationConfig
 
-from zlm.utils.utils import parse_json_markdown
-from zlm.variables import GEMINI_EMBEDDING_MODEL, OLLAMA_EMBEDDING_MODEL
+from rem_build.utils.utils import parse_json_markdown
+from rem_build.variables import GEMINI_EMBEDDING_MODEL, OLLAMA_EMBEDDING_MODEL
 
 
 class Gemini:
