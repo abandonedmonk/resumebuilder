@@ -87,21 +87,6 @@ try:
     file = st.file_uploader(
         "Upload your resume or any work-related data(PDF, JSON). [Recommended templates](https://github.com/Ztrimus/job-llm/tree/main/rem_build/demo_data)", type=["json", "pdf"])
 
-    # col_1, col_2, col_3 = st.columns(3)
-    # with col_1:
-    #     provider = st.selectbox(
-    #         "Select provider([OpenAI](https://openai.com/blog/openai-api), [Gemini Pro](https://ai.google.dev/)):", LLM_MAPPING.keys())
-    # with col_2:
-    #     model = st.selectbox("Select model:", LLM_MAPPING[provider]['model'])
-    # with col_3:
-    #     if provider != "Ollama":
-    #         api_key = ''
-    #         # api_key = st.text_input(
-    #         #     "Enter API key:", type="password", value="")
-    #     else:
-    #         api_key = None
-    # # st.markdown("<sub><sup>💡 GPT-4 is recommended for better results.</sup></sub>",
-    # #             unsafe_allow_html=True)
     provider = "Gemini"
     model = LLM_MAPPING[provider]['model']
     api_key = api_key
