@@ -185,8 +185,8 @@ try:
                 with resume_col_1:
                     st.subheader("Generated Resume")
                 with resume_col_2:
-                    pdf_data = read_file(resume_path, "rb")
                     print(f'Resume Path: {resume_path}')
+                    pdf_data = read_file(resume_path, "rb")
                     # destination_folder = "C:/Pillai/Resume_Builder_Flask/final_output/"
                     # new_resume_path = os.path.join(
                     #     destination_folder, resume_path)
