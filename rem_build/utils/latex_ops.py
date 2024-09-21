@@ -1,7 +1,7 @@
 import os
 import jinja2
 import streamlit as st
-from zlm.utils.utils import write_file, save_latex_as_pdf
+from rem_build.utils.utils import write_file, save_latex_as_pdf
 
 
 def escape_for_latex(data):
