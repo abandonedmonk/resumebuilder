@@ -305,7 +305,7 @@ class AutoApplyModel:
             resume_latex = latex_to_pdf(resume_details, new_resume_path)
             # st.write(f"resume_pdf_path: {resume_pdf_path}")
 
-            return new_resume_path, resume_details
+            return new_resume_path, resume_details, resume_latex
         except Exception as e:
             print(e)
             st.write("Error: \n\n", e)
