@@ -187,11 +187,11 @@ try:
                 with resume_col_2:
                     pdf_data = read_file(resume_path, "rb")
                     print(f'Resume Path: {resume_path}')
-                    destination_folder = "C:/Pillai/Resume_Builder_Flask/final_output/"
-                    new_resume_path = os.path.join(
-                        destination_folder, resume_path)
+                    # destination_folder = "C:/Pillai/Resume_Builder_Flask/final_output/"
+                    # new_resume_path = os.path.join(
+                    #     destination_folder, resume_path)
 
-                    with open(new_resume_path, "wb") as f:
+                    with open(resume_path, "wb") as f:
                         f.write(pdf_data)
 
                     st.download_button(label="Download Resume ⬇",
