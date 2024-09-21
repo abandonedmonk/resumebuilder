@@ -160,7 +160,7 @@ def download_pdf(pdf_path: str):
 def display_pdf(file, type="pdf"):
     if type == 'image':
         # Store Pdf with convert_from_path function
-        pages = convert_from_path(file)
+        pages = convert_from_path(file, poppler_path='poppler-24.07.0/Library/bin')
         for page in pages:
             st.image(page, use_column_width=True)
 
