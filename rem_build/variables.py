@@ -1,15 +1,5 @@
-'''
------------------------------------------------------------------------
-File: zlm/variables.py
-Creation Time: Aug 18th 2024, 5:26 am
-Author: Saurabh Zinjad
-Developer Email: saurabhzinjad@gmail.com
-Copyright (c) 2023-2024 Saurabh Zinjad. All rights reserved | https://github.com/Ztrimus
------------------------------------------------------------------------
-'''
-
-from zlm.prompts.sections_prompt import EXPERIENCE, SKILLS, PROJECTS, EDUCATIONS, CERTIFICATIONS, ACHIEVEMENTS
-from zlm.schemas.sections_schemas import Achievements, Certifications, Educations, Experiences, Projects, SkillSections
+from rem_build.prompts.sections_prompt import EXPERIENCE, SKILLS, PROJECTS, EDUCATIONS, CERTIFICATIONS, ACHIEVEMENTS
+from rem_build.schemas.sections_schemas import Achievements, Certifications, Educations, Experiences, Projects, SkillSections
 
 GPT_EMBEDDING_MODEL = "text-embedding-ada-002"
 # text-embedding-3-large, text-embedding-3-small

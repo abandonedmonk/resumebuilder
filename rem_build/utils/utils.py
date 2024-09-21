@@ -14,7 +14,7 @@ from datetime import datetime
 from langchain_core.output_parsers import JsonOutputParser
 from pylatex import Document
 from pylatex.utils import NoEscape
-from zlm.templates.pdf_gen import pdf_generator_vroom
+from rem_build.templates.pdf_gen import pdf_generator_vroom
 import shutil
 
 OS_SYSTEM = platform.system().lower()

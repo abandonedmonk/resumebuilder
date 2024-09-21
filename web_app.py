@@ -6,10 +6,10 @@ import zipfile
 import streamlit as st
 from dotenv import load_dotenv, find_dotenv  # Groq, Serper
 
-from zlm import AutoApplyModel
-from zlm.utils.utils import display_pdf, download_pdf, read_file, read_json
-from zlm.utils.metrics import jaccard_similarity, overlap_coefficient, cosine_similarity
-from zlm.variables import LLM_MAPPING
+from rem_build import AutoApplyModel
+from rem_build.utils.utils import display_pdf, download_pdf, read_file, read_json
+from rem_build.utils.metrics import jaccard_similarity, overlap_coefficient, cosine_similarity
+from rem_build.variables import LLM_MAPPING
 load_dotenv(find_dotenv())
 
 api_key = os.getenv("GOOGLE_API_KEY")
@@ -27,7 +27,7 @@ def encode_tex_file(file_path):
         current_loc = os.path.dirname(__file__)
         print(f"current_loc: {current_loc}")
         file_paths = [file_path.replace('.pdf', '.tex'), os.path.join(
-            current_loc, 'zlm', 'templates', 'resume.cls')]
+            current_loc, 'rem_build', 'templates', 'resume.cls')]
         zip_file_path = file_path.replace('.pdf', '.zip')
 
         # Create a zip file
@@ -85,7 +85,7 @@ try:
                         placeholder="Paste job description text here...", label_visibility="collapsed")
 
     file = st.file_uploader(
-        "Upload your resume or any work-related data(PDF, JSON). [Recommended templates](https://github.com/Ztrimus/job-llm/tree/main/zlm/demo_data)", type=["json", "pdf"])
+        "Upload your resume or any work-related data(PDF, JSON). [Recommended templates](https://github.com/Ztrimus/job-llm/tree/main/rem_build/demo_data)", type=["json", "pdf"])
 
     # col_1, col_2, col_3 = st.columns(3)
     # with col_1:

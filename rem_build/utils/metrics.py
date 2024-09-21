@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import pairwise
-from zlm.utils.utils import key_value_chunking
+from rem_build.utils.utils import key_value_chunking
 
 import nltk
 from nltk.corpus import stopwords
