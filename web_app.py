@@ -12,7 +12,7 @@ from zlm.utils.metrics import jaccard_similarity, overlap_coefficient, cosine_si
 from zlm.variables import LLM_MAPPING
 load_dotenv(find_dotenv())
 
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+api_key = os.getenv("GOOGLE_API_KEY")
 
 # print("Installing playwright...")
 # os.system("playwright install")
@@ -104,7 +104,7 @@ try:
     # #             unsafe_allow_html=True)
     provider = "Gemini"
     model = LLM_MAPPING[provider]['model']
-    api_key = 'AIzaSyBbjxygPqH_33rM2aIU6JXaVWudZ8nRefs'
+    api_key = api_key
 
     # Buttons side-by-side with styling
     col1, col2, col3 = st.columns(3)
